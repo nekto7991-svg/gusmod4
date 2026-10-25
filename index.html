@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ГУСЬ|МОД — Взломанные игры и приложения для Android</title>
+
+<!-- ============================================================ -->
+<!-- МЕСТО ДЛЯ КОДА POPUNDER (Adsterra)                            -->
+<!-- ============================================================ -->
+<!-- ВСТАВЬТЕ СЮДА КОД POPUNDER -->
+
+
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: 'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #f4f6fa; color: #1a1f2e; line-height: 1.5;
+}
+a { text-decoration: none; color: inherit; cursor: pointer; }
+img { display: block; max-width: 100%; }
+.container { max-width: 1240px; margin: 0 auto; padding: 0 20px; }
+.hidden { display: none !important; }
+
+/* Шапка */
+.header {
+    background: #fff; box-shadow: 0 1px 0 rgba(15,23,42,.06);
+    position: sticky; top: 0; z-index: 100;
+}
+.header .container {
+    display: flex; align-items: center; gap: 20px; height: 68px;
+}
+.logo a {
+    font-size: 1.65rem; font-weight: 900; color: #2563eb;
+    letter-spacing: -1px; display: inline-flex; align-items: center; gap: 8px;
+    cursor: pointer; user-select: none;
+}
+.logo a::before {
+    content: ""; width: 28px; height: 28px;
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    border-radius: 8px; display: inline-block;
+}
+.header-nav { flex: 1; }
+.header-nav ul { display: flex; list-style: none; gap: 6px; }
+.header-nav a {
+    display: inline-flex; padding: 9px 14px; border-radius: 10px;
+    font-weight: 700; font-size: .95rem; color: #334155;
+    transition: background .15s;
+}
+.header-nav a:hover, .header-nav a.active { background: #eff6ff; color: #2563eb; }
+
+/* Переключатель языка */
+.lang-select {
+    display: flex; align-items: center; gap: 6px;
+    background: #f1f5f9; border: 1px solid #e2e8f0;
+    border-radius: 10px; padding: 0 10px; height: 40px;
+    transition: border-color .15s;
+}
+.lang-select:hover { border-color: #2563eb; }
+.lang-select::before { content: "🌐"; font-size: 16px; line-height: 1; }
+.lang-select select {
+    background: transparent; border: none; font-family: inherit;
+    font-weight: 700; font-size: .85rem; color: #334155;
+    cursor: pointer; padding: 8px 0; outline: none; max-width: 160px;
+}
+
+/* Баннер сайта */
+.hero {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    padding: 40px 0; color: #fff; position: relative; overflow: hidden;
+}
+.hero::before {
+    content: ""; position: absolute; top: -80px; right: -80px;
+    width: 380px; height: 380px;
+    background: radial-gradient(circle, rgba(37,99,235,.35), transparent 70%);
+    border-radius: 50%;
+}
+.hero .container { position: relative; }
+.hero h1 { font-size: 1.9rem; font-weight: 800; margin-bottom: 10px; }
+.hero p { color: #94a3b8; font-size: 1rem; max-width: 620px; }
+
+/* ============ РЕКЛАМНЫЙ БЛОК 720x90 (GIF) ============ */
+.ad-banner-728 {
+    max-width: 1240px;
+    margin: 20px auto;
+    padding: 0 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90px;
+}
+.ad-banner-728 a { display: inline-block; max-width: 100%; }
+.ad-banner-728 img {
+    display: block;
+    width: 720px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(15,23,42,.08);
+}
+@media (max-width: 780px) {
+    .ad-banner-728 img { width: 100%; }
+    .ad-banner-728 { padding: 0 12px; margin: 12px auto; }
+}
+
+/* Секция */
+.section { padding: 32px 0 60px; }
+.section-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; }
+.section-head h2 { font-size: 1.4rem; font-weight: 800; color: #0f172a; }
+
+/* Категории */
+.categories {
+    display: flex; gap: 8px; overflow-x: auto;
+    padding-bottom: 14px; margin-bottom: 20px; scrollbar-width: none;
+}
+.categories::-webkit-scrollbar { display: none; }
+.cat-pill {
+    flex-shrink: 0; padding: 8px 16px;
+    background: #fff; border: 1px solid #e2e8f0; border-radius: 100px;
+    font-size: .85rem; font-weight: 700; color: #475569;
+    cursor: pointer; transition: all .15s; user-select: none;
+}
+.cat-pill:hover { border-color: #2563eb; color: #2563eb; }
+.cat-pill.active { background: #2563eb; border-color: #2563eb; color: #fff; }
+
+/* Сетка */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 16px;
+}
+.card {
+    background: #fff; border-radius: 16px; padding: 16px;
+    display: flex; flex-direction: column; position: relative;
+    box-shadow: 0 1px 2px rgba(15,23,42,.06);
+    border: 1px solid #f1f5f9;
+    transition: transform .2s, box-shadow .2s;
+    cursor: pointer;
+}
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(15,23,42,.10);
+    border-color: #dbeafe;
+}
+.card .badges { position: absolute; top: 14px; left: 14px; z-index: 2; }
+.badge {
+    display: inline-block; padding: 3px 8px; font-size: .62rem;
+    font-weight: 900; letter-spacing: .5px; border-radius: 6px;
+    text-transform: uppercase;
+}
+.badge-mod { background: #f59e0b; color: #1e293b; }
+.badge-free { background: #10b981; color: #fff; }
+.card .thumb {
+    width: 96px; height: 96px; margin: 4px auto 12px;
+    border-radius: 22px; overflow: hidden; background: #f1f5f9;
+    box-shadow: 0 4px 12px rgba(15,23,42,.08);
+    display: flex; align-items: center; justify-content: center;
+}
+.card .thumb img { width: 100%; height: 100%; object-fit: contain; padding: 8px; background: #fff; }
+.card .name {
+    font-weight: 800; font-size: .92rem; color: #0f172a;
+    line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical; overflow: hidden;
+    margin-bottom: 4px; text-align: center; min-height: 2.6em;
+}
+.card .cat { font-size: .78rem; color: #64748b; text-align: center; margin-bottom: 12px; }
+.card .bottom {
+    display: flex; justify-content: space-between; align-items: center;
+    gap: 6px; margin-top: auto; padding-top: 12px;
+    border-top: 1px solid #f1f5f9;
+}
+.card .ver {
+    background: #f1f5f9; padding: 3px 8px; border-radius: 8px;
+    font-size: .72rem; font-weight: 700; color: #64748b;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    max-width: 85px;
+}
+.card .btn-dl {
+    display: inline-flex; align-items: center; gap: 4px;
+    padding: 6px 12px; background: #2563eb; color: #fff;
+    border-radius: 8px; font-size: .8rem; font-weight: 800;
+    transition: background .15s; white-space: nowrap;
+}
+.card .btn-dl:hover { background: #1d4ed8; }
+.card .btn-dl svg { width: 14px; height: 14px; }
+
+/* Страница игры */
+.app-page { padding: 32px 0 60px; }
+.app-detail {
+    background: #fff; border-radius: 20px; padding: 32px;
+    box-shadow: 0 4px 20px rgba(15,23,42,.06);
+    max-width: 820px; margin: 0 auto;
+}
+.app-detail__header {
+    display: flex; gap: 22px; align-items: flex-start;
+    margin-bottom: 28px; flex-wrap: wrap;
+}
+.app-detail__icon {
+    width: 110px; height: 110px; border-radius: 26px;
+    overflow: hidden; flex-shrink: 0; background: #fff;
+    box-shadow: 0 6px 18px rgba(15,23,42,.1);
+    display: flex; align-items: center; justify-content: center;
+}
+.app-detail__icon img { width: 100%; height: 100%; object-fit: contain; padding: 10px; }
+.app-detail__info { flex: 1; min-width: 220px; }
+.app-detail__info h1 {
+    font-size: 1.6rem; font-weight: 800; margin-bottom: 10px; line-height: 1.25;
+}
+.app-detail__meta { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
+.app-detail__meta span {
+    background: #f1f5f9; padding: 5px 12px; border-radius: 8px;
+    font-size: .82rem; color: #475569; font-weight: 600;
+}
+.mod-description {
+    background: #f8fafc; border-radius: 14px; padding: 18px;
+    margin-bottom: 22px; border: 1px solid #e2e8f0;
+}
+.mod-description h3 { font-size: 1rem; margin-bottom: 8px; color: #0f172a; }
+.mod-description p { font-size: .9rem; color: #475569; line-height: 1.6; }
+.download-btn {
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    width: 100%; padding: 18px; background: #2563eb; color: #fff;
+    border-radius: 14px; font-size: 1.15rem; font-weight: 800;
+    border: none; cursor: pointer; transition: background .2s; text-align: center;
+}
+.download-btn:hover { background: #1d4ed8; }
+.download-btn svg { width: 22px; height: 22px; }
+.instruction {
+    margin-top: 26px; padding: 20px; background: #f8fafc;
+    border-radius: 14px; border: 1px solid #e2e8f0;
+}
+.instruction h3 { font-size: 1rem; margin-bottom: 10px; }
+.instruction ol { padding-left: 20px; color: #475569; font-size: .9rem; }
+.instruction li { margin-bottom: 6px; }
+.back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    margin-top: 20px; color: #2563eb; font-weight: 700;
+    background: none; border: none; cursor: pointer;
+    font-size: .95rem; padding: 8px 0;
+}
+.back-link:hover { text-decoration: underline; }
+
+/* Пасхалка */
+.easter-egg-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.75); display: flex; align-items: center; justify-content: center;
+    z-index: 1000; cursor: default;
+}
+.easter-egg-content {
+    position: relative; max-width: 80%; max-height: 80%;
+    animation: popIn 0.3s ease-out;
+}
+@keyframes popIn {
+    from { transform: scale(0.7); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+.easter-egg-content img {
+    width: 100%; height: auto; border-radius: 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+    max-height: 70vh; object-fit: contain;
+}
+.easter-egg-close {
+    position: absolute; top: 10px; right: 10px;
+    width: 40px; height: 40px; border-radius: 50%;
+    background: rgba(255,255,255,0.9); color: #1a1f2e; border: none;
+    font-size: 22px; font-weight: 900; line-height: 1;
+    cursor: pointer; display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.3); transition: background .15s, transform .15s;
+}
+.easter-egg-close:hover { background: #fee2e2; color: #dc2626; transform: scale(1.1); }
+
+@media (max-width: 780px) {
+    .header-nav { display: none; }
+    .hero h1 { font-size: 1.4rem; }
+    .grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px; }
+    .card { padding: 12px; }
+    .card .thumb { width: 76px; height: 76px; }
+    .app-detail { padding: 20px; }
+    .app-detail__icon { width: 88px; height: 88px; border-radius: 20px; }
+    .header .container { gap: 12px; height: 60px; }
+    .logo a { font-size: 1.4rem; }
+    .logo a::before { width: 24px; height: 24px; }
+    .lang-select { height: 36px; padding: 0 8px; }
+    .lang-select select { font-size: .8rem; max-width: 110px; }
+    .lang-select::before { font-size: 14px; }
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <div class="logo"><a id="logo-btn">ГУСЬ|МОД</a></div>
+        <nav class="header-nav">
+            <ul>
+                <li><a onclick="showMain(); setCategory('Все')" class="active" data-i18n="navHome">Главная</a></li>
+                <li><a onclick="showMain(); setCategory('Игры')" data-i18n="navGames">Игры</a></li>
+                <li><a onclick="showMain(); setCategory('Приложения')" data-i18n="navApps">Приложения</a></li>
+            </ul>
+        </nav>
+        <div class="lang-select">
+            <select id="lang-select" aria-label="Language">
+                <option value="ru">🇷🇺 Русский</option>
+                <option value="uk">🇺🇦 Українська</option>
+                <option value="pl">🇵🇱 Polski</option>
+                <option value="en">🇬🇧 English</option>
+                <option value="es">🇪🇸 Español</option>
+                <option value="fr">🇫🇷 Français</option>
+                <option value="de">🇩🇪 Deutsch</option>
+                <option value="it">🇮🇹 Italiano</option>
+                <option value="pt">🇵🇹 Português</option>
+                <option value="tr">🇹🇷 Türkçe</option>
+                <option value="zh">🇨🇳 中文</option>
+                <option value="ja">🇯🇵 日本語</option>
+                <option value="ko">🇰🇷 한국어</option>
+                <option value="ar">🇸🇦 العربية</option>
+            </select>
+        </div>
+    </div>
+</header>
+
+<main id="main-page">
+    <section class="hero">
+        <div class="container">
+            <h1 data-i18n="heroTitle">Взломанные игры и приложения для Android</h1>
+            <p data-i18n="heroText">Бесконечные деньги, алмазы, разблокированные скины и премиум-подписки. Скачивай MOD-версии бесплатно.</p>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- РЕКЛАМНЫЙ БАННЕР 720x90 (Adsterra GIF)                        -->
+    <!-- ============================================================ -->
+    <div class="ad-banner-728">
+        <a href="https://beta.publishers.adsterra.com/referral/rNtJ4eprdf" rel="nofollow" target="_blank">
+            <img alt="banner" src="https://landings-cdn.adsterratech.com/referralBanners/gif/720x90_adsterra_reff.gif" />
+        </a>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-head"><h2 data-i18n="allTitle">Все игры и приложения</h2></div>
+            <div class="categories" id="categories"></div>
+            <div class="grid" id="cards-grid"></div>
+        </div>
+    </section>
+</main>
+
+<main id="app-page" class="app-page hidden">
+    <div class="container">
+        <div class="app-detail">
+            <div class="app-detail__header">
+                <div class="app-detail__icon"><img id="detail-icon" src="" alt=""></div>
+                <div class="app-detail__info">
+                    <h1 id="detail-name"></h1>
+                    <div class="app-detail__meta">
+                        <span id="detail-badge"></span>
+                        <span id="detail-category"></span>
+                        <span id="detail-version"></span>
+                        <span id="detail-size"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="mod-description">
+                <h3 data-i18n="modInfo">Что даёт взломанная версия</h3>
+                <p id="detail-mod-description"></p>
+            </div>
+            <a id="detail-download" class="download-btn" href="#" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg>
+                <span data-i18n="goDownload">Перейти к скачиванию мода</span>
+            </a>
+            <div class="instruction">
+                <h3 data-i18n="howToTitle">Как скачать мод</h3>
+                <ol>
+                    <li data-i18n="step1">Нажмите кнопку «Перейти к скачиванию мода».</li>
+                    <li data-i18n="step2">Вы попадёте на проверенную страницу с модом.</li>
+                    <li data-i18n="step3">Найдите на странице кнопку загрузки (обычно «Download» или «Скачать») и нажмите её.</li>
+                </ol>
+            </div>
+            <button class="back-link" onclick="showMain()" data-i18n="back">← Назад ко всем играм</button>
+        </div>
+    </div>
+</main>
+
+<!-- ============================================================ -->
+<!-- МЕСТО ДЛЯ КОДА SOCIAL BAR (Adsterra)                          -->
+<!-- ============================================================ -->
+<!-- ВСТАВЬТЕ СЮДА КОД SOCIAL BAR -->
+
+
+<script>
+/* ============================================================
+   ПАСХАЛКА
+   ============================================================ */
+const EASTER_EGG_IMAGE = 'https://i.imgflip.com/2/9drg28.jpg';
+const EASTER_EGG_SOUND = 'https://www.image2url.com/r2/default/audio/1792907239127-3d34edc1-6f23-496f-8751-9698a81a189b.mp3';
+
+let logoClickCount = 0;
+let easterEggTimeout = null;
+let audioPlayer = null;
+let currentCategory = 'Все';
+let currentLang = 'ru';
+let currentAppId = null;
+
+function resetLogoClickCount() {
+    logoClickCount = 0;
+    if (easterEggTimeout) {
+        clearTimeout(easterEggTimeout);
+        easterEggTimeout = null;
+    }
+}
+
+function showEasterEgg() {
+    const old = document.querySelector('.easter-egg-overlay');
+    if (old) old.remove();
+
+    const overlay = document.createElement('div');
+    overlay.className = 'easter-egg-overlay';
+    const content = document.createElement('div');
+    content.className = 'easter-egg-content';
+
+    const img = document.createElement('img');
+    img.src = EASTER_EGG_IMAGE;
+    img.alt = 'Easter egg';
+
+    const closeBtn = document.createElement('button');
+    closeBtn.className = 'easter-egg-close';
+    closeBtn.innerHTML = '✕';
+    closeBtn.setAttribute('aria-label', 'Close');
+    closeBtn.onclick = (e) => {
+        e.stopPropagation();
+        try {
+            audioPlayer = new Audio(EASTER_EGG_SOUND);
+            audioPlayer.volume = 0.8;
+            audioPlayer.play().catch(() => {});
+        } catch (err) {}
+        overlay.remove();
+        resetLogoClickCount();
+    };
+
+    content.appendChild(img);
+    content.appendChild(closeBtn);
+    overlay.appendChild(content);
+
+    overlay.onclick = (e) => {
+        if (e.target === overlay) {
+            try {
+                audioPlayer = new Audio(EASTER_EGG_SOUND);
+                audioPlayer.volume = 0.8;
+                audioPlayer.play().catch(() => {});
+            } catch (err) {}
+            overlay.remove();
+            resetLogoClickCount();
+        }
+    };
+
+    document.body.appendChild(overlay);
+}
+
+document.getElementById('logo-btn').addEventListener('click', function() {
+    if (currentCategory !== 'Все') {
+        resetLogoClickCount();
+        showMain();
+        setCategory('Все');
+        return;
+    }
+    logoClickCount++;
+    if (easterEggTimeout) clearTimeout(easterEggTimeout);
+    easterEggTimeout = setTimeout(() => {
+        logoClickCount = 0;
+        easterEggTimeout = null;
+    }, 1000);
+    if (logoClickCount >= 3) {
+        showEasterEgg();
+    }
+});
+
+/* ============================================================
+   БАЗА ДАННЫХ
+   ============================================================ */
+const APPS = [
+    { id:'minecraft', name:'Minecraft', category:'Приключения', type:'Игры', version:'v1.21.50', size:'750 MB', modKey:'resources',
+      iconSources:['https://store-images.s-microsoft.com/image/apps.42664.14216416494490173.9772fa78-5a01-45ce-9b9e-6ec61a10f4e2.95fccfe4-c6b0-4bcb-8499-2a0b63cbfaee','https://img.icons8.com/color/512/minecraft.png'],
+      badge:'MOD', badgeType:'mod',
+      downloadUrl:'https://mcead.com/index.php?do=file-page&id=34024&news_id=2183&name=Minecraft%20(MOD%20-%20Menu)&uan=1&d=p&u=Bw4222Gb4SGp&lang=pl' },
+    { id:'among-us', name:'Among Us', category:'Экшен', type:'Игры', version:'v2026.9.29', size:'130 MB', modKey:'all',
+      iconSources:['https://play-lh.googleusercontent.com/pfGArJJx-vtMRVu2-ziedzAhTLsHgks6N3mNyyOC0oxRdsXINGwdd9h4ZutdTG7MfgiqlDXBXnk-kNo-Fns70Q','https://logodix.com/logos/2207096.png'],
+      badge:'MOD', badgeType:'mod',
+      downloadUrl:'https://mcead.com/ru/1858-among-us-mod-vse-otkryto.html' },
+    { id:'clash-of-clans', name:'Clash of Clans', category:'Стратегии', type:'Игры', version:'v18.600.7', size:'280 MB', modKey:'money',
+      iconSources:['https://img.utdstc.com/icon/acd/ac2/acdac2a2d9597437942d2a74eb9d458158d01003e34ca932d9420b1c14c17af9:600','https://www.nicepng.com/ourpic/u2q8i1e6r5y3o0r5_clash-of-clans/'],
+      badge:'MOD', badgeType:'mod',
+      downloadUrl:'https://mcead.com/en/1634-clash-of-clans-mod-a-lot-of-money.html' },
+    { id:'brawl-stars', name:'Brawl Stars', category:'Экшен', type:'Игры', version:'v68.279', size:'450 MB', modKey:'all',
+      iconSources:['https://www.pngsucai.com/png/3300426.html','https://img.icons8.com/color/512/brawl-stars.png'],
+      badge:'MOD', badgeType:'mod',
+      downloadUrl:'https://mcead.com/en/1721-brawl-stars-mod-a-lot-of-money.html' },
+    { id:'free-fire', name:'Free Fire', category:'Экшен', type:'Игры', version:'v1.123.1', size:'700 MB', modKey:'aimbot',
+      iconSources:['https://toppng.com/free-image/free-fire-game-png-PNG-free-PNG-Images_444611','https://img.icons8.com/color/512/free-fire.png'],
+      badge:'MOD', badgeType:'mod',
+      downloadUrl:'https://mcead.com/en/2247-free-fire-mod-aim.html' },
+    { id:'subway-surfers', name:'Subway Surfers', category:'Аркады', type:'Игры', version:'v3.70.2', size:'145 MB', modKey:'money',
+      iconSources:['https://www.hiclipart.com/free-transparent-background-png-clipart-pjijv','https://img.icons8.com/color/512/subway-surfers.png'],
+      badge:'MOD', badgeType:'mod',
+      downloadUrl:'https://mcead.com/en/1529-subway-surfers-a-lot-of-money-keys.html' },
+    { id:'spotify', name:'Spotify Premium', category:'Музыка', type:'Приложения', version:'v9.1.60', size:'173 MB', modKey:'premium',
+      iconSources:['https://img.icons8.com/color/512/spotify--v1.png','https://www.google.com/s2/favicons?domain=spotify.com&sz=128'],
+      badge:'MOD', badgeType:'mod',
+      downloadUrl:'https://apkmody.io/apps/spotify-premium-mod-apk' },
+    { id:'telegram', name:'Telegram', category:'Общение', type:'Приложения', version:'v12.10.6', size:'65 MB', modKey:'premium',
+      iconSources:['https://img.icons8.com/color/512/telegram-app.png','https://www.google.com/s2/favicons?domain=telegram.org&sz=128'],
+      badge:'MOD', badgeType:'mod',
+      downloadUrl:'https://mcead.com/ru/telegram-mod-premium-unlocked.html' },
+    { id:'netflix', name:'Netflix Premium', category:'Видео', type:'Приложения', version:'v9.83.0', size:'65 MB', modKey:'premium',
+      iconSources:['https://img.icons8.com/color/512/netflix--v1.png','https://www.google.com/s2/favicons?domain=netflix.com&sz=128'],
+      badge:'MOD', badgeType:'mod',
+      downloadUrl:'https://mcead.com/ru/netflix-premium-mod-vse-otkryto.html' },
+    { id:'capcut', name:'CapCut', category:'Видео', type:'Приложения', version:'v19.8.0', size:'230 MB', modKey:'premium',
+      iconSources:['https://www.google.com/s2/favicons?domain=capcut.com&sz=128','https://img.icons8.com/color/512/capcut.png'],
+      badge:'MOD', badgeType:'mod',
+      downloadUrl:'https://mcead.com/ru/capcut-pro-premium-mod-unlocked.html' },
+    { id:'instagram', name:'Instagram', category:'Соцсети', type:'Приложения', version:'v451.0.0', size:'65 MB', modKey:'ads',
+      iconSources:['https://img.icons8.com/color/512/instagram-new--v1.png','https://www.google.com/s2/favicons?domain=instagram.com&sz=128'],
+      badge:'MOD', badgeType:'mod',
+      downloadUrl:'https://mcead.com/ru/instagram.html' },
+    { id:'tiktok', name:'TikTok', category:'Соцсети', type:'Приложения', version:'v47.1.7', size:'180 MB', modKey:'ads',
+      iconSources:['https://img.icons8.com/color/512/tiktok--v1.png','https://www.google.com/s2/favicons?domain=tiktok.com&sz=128'],
+      badge:'MOD', badgeType:'mod',
+      downloadUrl:'https://mcead.com/ru/tiktok-premium-mod-unlocked.html' },
+    { id:'youtube', name:'YouTube Premium', category:'Видео', type:'Приложения', version:'v19.25.39', size:'130 MB', modKey:'premium',
+      iconSources:['https://img.icons8.com/color/512/youtube-play--v1.png','https://www.google.com/s2/favicons?domain=youtube.com&sz=128'],
+      badge:'MOD', badgeType:'mod',
+      downloadUrl:'https://mcead.com/ru/youtube-revanced.html' },
+    { id:'facebook', name:'Facebook', category:'Соцсети', type:'Приложения', version:'v519.0.0', size:'85 MB', modKey:'ads',
+      iconSources:['https://img.icons8.com/color/512/facebook-new.png','https://www.google.com/s2/favicons?domain=facebook.com&sz=128'],
+      badge:'MOD', badgeType:'mod',
+      downloadUrl:'https://mcead.com/ru/facebook-lite.html' },
+    { id:'vsco', name:'VSCO: Редактор фото', category:'Фотография', type:'Приложения', version:'v496', size:'190 MB', modKey:'premium',
+      iconSources:['https://www.google.com/s2/favicons?domain=vsco.co&sz=128','https://img.icons8.com/color/512/vsco.png'],
+      badge:'MOD', badgeType:'mod',
+      downloadUrl:'https://apkmody.io/apps/vsco' },
+    { id:'snapseed', name:'Snapseed', category:'Фотография', type:'Приложения', version:'v2.21.0', size:'30 MB', modKey:'ads',
+      iconSources:['https://www.google.com/s2/favicons?domain=snapseed.online&sz=128','https://img.icons8.com/color/512/snapseed.png'],
+      badge:'FREE', badgeType:'free',
+      downloadUrl:'https://apkmody.io/apps/snapseed' },
+    { id:'lightroom', name:'Lightroom Premium', category:'Фотография', type:'Приложения', version:'v10.1.0', size:'200 MB', modKey:'premium',
+      iconSources:['https://www.google.com/s2/favicons?domain=lightroom.adobe.com&sz=128','https://img.icons8.com/color/512/lightroom.png'],
+      badge:'MOD', badgeType:'mod',
+      downloadUrl:'https://apkmody.io/apps/adobe-lightroom' },
+    { id:'google-maps', name:'Google Maps', category:'Навигация', type:'Приложения', version:'v11.152.0100', size:'200 MB', modKey:'ads',
+      iconSources:['https://img.icons8.com/color/512/google-maps.png','https://www.google.com/s2/favicons?domain=maps.google.com&sz=128'],
+      badge:'MOD', badgeType:'mod',
+      downloadUrl:'https://apkmody.io/apps/google-maps' },
+    { id:'google-photos', name:'Google Photos', category:'Фотография', type:'Приложения', version:'v7.11.0', size:'70 MB', modKey:'ads',
+      iconSources:['https://img.icons8.com/color/512/google-photos.png','https://www.google.com/s2/favicons?domain=photos.google.com&sz=128'],
+      badge:'FREE', badgeType:'free',
+      downloadUrl:'https://apkmody.io/apps/google-photos' },
+    { id:'2048', name:'2048', category:'Головоломки', type:'Игры', version:'v7.1.0', size:'25 MB', modKey:'ads',
+      iconSources:['https://www.google.com/s2/favicons?domain=play2048.co&sz=128','https://img.icons8.com/color/512/2048.png'],
+      badge:'FREE', badgeType:'free',
+      downloadUrl:'https://apkmody.io/games/2048' },
+    { id:'crossy-road', name:'Crossy Road', category:'Аркады', type:'Игры', version:'v3.12.7', size:'180 MB', modKey:'unlocked',
+      iconSources:['https://www.google.com/s2/favicons?domain=yodo1.com&sz=128','https://img.icons8.com/color/512/crossy-road.png'],
+      badge:'MOD', badgeType:'mod',
+      downloadUrl:'https://apkmody.io/games/crossy-road' },
+    { id:'bloons-td6', name:'Bloons TD 6', category:'Стратегии', type:'Игры', version:'v46.2', size:'450 MB', modKey:'money',
+      iconSources:['https://www.google.com/s2/favicons?domain=ninjakiwi.com&sz=128','https://img.icons8.com/color/512/bloons-td-6.png'],
+      badge:'MOD', badgeType:'mod',
+      downloadUrl:'https://apkmody.io/games/bloons-td-6' },
+    { id:'angry-birds', name:'Angry Birds', category:'Аркады', type:'Игры', version:'v8.0.3', size:'95 MB', modKey:'unlocked',
+      iconSources:['https://img.icons8.com/color/512/angry-birds.png','https://www.google.com/s2/favicons?domain=rovio.com&sz=128'],
+      badge:'MOD', badgeType:'mod',
+      downloadUrl:'https://apkmody.io/games/angry-birds' },
+    { id:'temple-run-2', name:'Temple Run 2', category:'Аркады', type:'Игры', version:'v1.117.0', size:'100 MB', modKey:'money',
+      iconSources:['https://www.google.com/s2/favicons?domain=imangistudios.com&sz=128','https://img.icons8.com/color/512/temple-run-2.png'],
+      badge:'MOD', badgeType:'mod',
+      downloadUrl:'https://apkmody.io/games/temple-run-2' },
+    { id:'fifa-mobile', name:'FIFA Mobile', category:'Спортивные', type:'Игры', version:'v24.1.02', size:'650 MB', modKey:'money',
+      iconSources:['https://www.google.com/s2/favicons?domain=ea.com&sz=128','https://img.icons8.com/color/512/fifa-mobile.png'],
+      badge:'MOD', badgeType:'mod',
+      downloadUrl:'https://apkmody.io/games/fifa-mobile' },
+    { id:'asphalt-9', name:'Asphalt 9: Legends', category:'Гонки', type:'Игры', version:'v4.6.0', size:'1.1 GB', modKey:'unlocked',
+      iconSources:['https://www.google.com/s2/favicons?domain=gameloft.com&sz=128','https://img.icons8.com/color/512/asphalt-9.png'],
+      badge:'MOD', badgeType:'mod',
+      downloadUrl:'https://apkmody.io/games/asphalt-9-legends' },
+    { id:'real-racing-3', name:'Real Racing 3', category:'Гонки', type:'Игры', version:'v13.0.1', size:'1.3 GB', modKey:'money',
+      iconSources:['https://www.google.com/s2/favicons?domain=ea.com&sz=128','https://img.icons8.com/color/512/real-racing-3.png'],
+      badge:'MOD', badgeType:'mod',
+      downloadUrl:'https://apkmody.io/games/real-racing-3' },
+    { id:'plants-vs-zombies', name:'Plants vs. Zombies 2', category:'Стратегии', type:'Игры', version:'v11.6.1', size:'180 MB', modKey:'money',
+      iconSources:['https://www.google.com/s2/favicons?domain=ea.com&sz=128','https://img.icons8.com/color/512/plants-vs-zombies-2.png'],
+      badge:'MOD', badgeType:'mod',
+      downloadUrl:'https://apkmody.io/games/plants-vs-zombies-2' },
+    { id:'cut-the-rope', name:'Cut the Rope', category:'Головоломки', type:'Игры', version:'v3.38.0', size:'60 MB', modKey:'unlocked',
+      iconSources:['https://www.google.com/s2/favicons?domain=zeptolab.com&sz=128','https://img.icons8.com/color/512/cut-the-rope.png'],
+      badge:'FREE', badgeType:'free',
+      downloadUrl:'https://apkmody.io/games/cut-the-rope' }
+];
+
+/* ============================================================
+   ПЕРЕВОДЫ
+   ============================================================ */
+const T = {
+  ru: { navHome:'Главная', navGames:'Игры', navApps:'Приложения',
+    heroTitle:'Взломанные игры и приложения для Android',
+    heroText:'Бесконечные деньги, алмазы, разблокированные скины и премиум-подписки. Скачивай MOD-версии бесплатно.',
+    allTitle:'Все игры и приложения', download:'Скачать',
+    modInfo:'Что даёт взломанная версия', goDownload:'Перейти к скачиванию мода',
+    howToTitle:'Как скачать мод',
+    step1:'Нажмите кнопку «Перейти к скачиванию мода».',
+    step2:'Вы попадёте на проверенную страницу с модом.',
+    step3:'Найдите на странице кнопку загрузки (обычно «Download» или «Скачать») и нажмите её.',
+    back:'← Назад ко всем играм',
+    catAll:'Все', catGames:'Игры', catApps:'Приложения',
+    siteTitle:'ГУСЬ|МОД — Взломанные игры и приложения для Android',
+    appPageTitle:'Скачать {name} (MOD) — ГУСЬ|МОД',
+    categories:{'Приключения':'Приключения','Экшен':'Экшен','Стратегии':'Стратегии','Аркады':'Аркады','Головоломки':'Головоломки','Симуляторы':'Симуляторы','Гонки':'Гонки','Музыка':'Музыка','Общение':'Общение','Видео':'Видео','Соцсети':'Соцсети','Фотография':'Фотография','Навигация':'Навигация','Спортивные':'Спортивные','Ролевые':'Ролевые'} },
+  uk: { navHome:'Головна', navGames:'Ігри', navApps:'Додатки',
+    heroTitle:'Зламані ігри та додатки для Android',
+    heroText:'Нескінченні гроші, алмази, розблоковані скіни та преміум-підписки. Завантажуй MOD-версії безкоштовно.',
+    allTitle:'Усі ігри та додатки', download:'Завантажити',
+    modInfo:'Що дає зламана версія', goDownload:'Перейти до завантаження моду',
+    howToTitle:'Як завантажити мод',
+    step1:'Натисніть кнопку «Перейти до завантаження моду».',
+    step2:'Ви потрапите на перевірену сторінку з модом.',
+    step3:'Знайдіть на сторінці кнопку завантаження (зазвичай «Download» або «Завантажити») і натисніть її.',
+    back:'← Назад до всіх ігор',
+    catAll:'Усі', catGames:'Ігри', catApps:'Додатки',
+    siteTitle:'ГУСЬ|МОД — Зламані ігри та додатки для Android',
+    appPageTitle:'Завантажити {name} (MOD) — ГУСЬ|МОД',
+    categories:{'Приключения':'Пригоди','Экшен':'Екшн','Стратегии':'Стратегії','Аркады':'Аркади','Головоломки':'Головоломки','Симуляторы':'Симулятори','Гонки':'Гонки','Музыка':'Музика','Общение':'Спілкування','Видео':'Відео','Соцсети':'Соцмережі','Фотография':'Фотографія','Навигация':'Навігація','Спортивные':'Спортивні','Ролевые':'Рольові'} },
+  pl: { navHome:'Główna', navGames:'Gry', navApps:'Aplikacje',
+    heroTitle:'Zhakowane gry i aplikacje na Androida',
+    heroText:'Nieskończone pieniądze, klejnoty, odblokowane skórki i subskrypcje premium. Pobieraj wersje MOD za darmo.',
+    allTitle:'Wszystkie gry i aplikacje', download:'Pobierz',
+    modInfo:'Co daje zhakowana wersja', goDownload:'Przejdź do pobrania moda',
+    howToTitle:'Jak pobrać mod',
+    step1:'Kliknij przycisk „Przejdź do pobrania moda".',
+    step2:'Zostaniesz przeniesiony na sprawdzoną stronę z modem.',
+    step3:'Znajdź na stronie przycisk pobierania (zwykle „Download" lub „Pobierz") i kliknij go.',
+    back:'← Wróć do wszystkich gier',
+    catAll:'Wszystkie', catGames:'Gry', catApps:'Aplikacje',
+    siteTitle:'ГУСЬ|МОД — Zhakowane gry i aplikacje na Androida',
+    appPageTitle:'Pobierz {name} (MOD) — ГУСЬ|МОД',
+    categories:{'Приключения':'Przygoda','Экшен':'Akcja','Стратегии':'Strategie','Аркады':'Arkadowe','Головоломки':'Łamigłówki','Симуляторы':'Symulatory','Гонки':'Wyścigi','Музыка':'Muzyka','Общение':'Komunikacja','Видео':'Wideo','Соцсети':'Media społecznościowe','Фотография':'Fotografia','Навигация':'Nawigacja','Спортивные':'Sportowe','Ролевые':'RPG'} },
+  en: { navHome:'Home', navGames:'Games', navApps:'Apps',
+    heroTitle:'Hacked games and apps for Android',
+    heroText:'Unlimited money, gems, unlocked skins, and premium subscriptions. Download MOD versions for free.',
+    allTitle:'All games and apps', download:'Download',
+    modInfo:'What the hacked version gives', goDownload:'Go to mod download',
+    howToTitle:'How to download the mod',
+    step1:'Click the "Go to mod download" button.',
+    step2:'You will be taken to a verified page with the mod.',
+    step3:'Find the download button on the page (usually "Download") and click it.',
+    back:'← Back to all games',
+    catAll:'All', catGames:'Games', catApps:'Apps',
+    siteTitle:'ГУСЬ|МОД — Hacked games and apps for Android',
+    appPageTitle:'Download {name} (MOD) — ГУСЬ|МОД',
+    categories:{'Приключения':'Adventure','Экшен':'Action','Стратегии':'Strategy','Аркады':'Arcade','Головоломки':'Puzzle','Симуляторы':'Simulation','Гонки':'Racing','Музыка':'Music','Общение':'Communication','Видео':'Video','Соцсети':'Social','Фотография':'Photography','Навигация':'Navigation','Спортивные':'Sports','Ролевые':'Role-playing'} },
+  es: { navHome:'Inicio', navGames:'Juegos', navApps:'Aplicaciones',
+    heroTitle:'Juegos y aplicaciones modificados para Android',
+    heroText:'Dinero infinito, gemas, skins desbloqueados y suscripciones premium. Descarga versiones MOD gratis.',
+    allTitle:'Todos los juegos y aplicaciones', download:'Descargar',
+    modInfo:'Qué ofrece la versión modificada', goDownload:'Ir a la descarga del mod',
+    howToTitle:'Cómo descargar el mod',
+    step1:'Pulsa el botón «Ir a la descarga del mod».',
+    step2:'Serás redirigido a una página verificada con el mod.',
+    step3:'Busca el botón de descarga en la página (normalmente «Download» o «Descargar») y púlsalo.',
+    back:'← Volver a todos los juegos',
+    catAll:'Todos', catGames:'Juegos', catApps:'Aplicaciones',
+    siteTitle:'ГУСЬ|МОД — Juegos y aplicaciones modificados para Android',
+    appPageTitle:'Descargar {name} (MOD) — ГУСЬ|МОД',
+    categories:{'Приключения':'Aventura','Экшен':'Acción','Стратегии':'Estrategia','Аркады':'Arcade','Головоломки':'Puzles','Симуляторы':'Simulación','Гонки':'Carreras','Музыка':'Música','Общение':'Comunicación','Видео':'Vídeo','Соцсети':'Redes sociales','Фотография':'Fotografía','Навигация':'Navegación','Спортивные':'Deportes','Ролевые':'Rol'} },
+  fr: { navHome:'Accueil', navGames:'Jeux', navApps:'Applications',
+    heroTitle:'Jeux et applications modifiés pour Android',
+    heroText:'Argent illimité, gemmes, skins débloqués et abonnements premium. Téléchargez les versions MOD gratuitement.',
+    allTitle:'Tous les jeux et applications', download:'Télécharger',
+    modInfo:'Ce que propose la version modifiée', goDownload:'Aller au téléchargement du mod',
+    howToTitle:'Comment télécharger le mod',
+    step1:'Cliquez sur le bouton « Aller au téléchargement du mod ».',
+    step2:'Vous serez redirigé vers une page vérifiée avec le mod.',
+    step3:'Trouvez le bouton de téléchargement sur la page (généralement « Download » ou « Télécharger ») et cliquez dessus.',
+    back:'← Retour à tous les jeux',
+    catAll:'Tous', catGames:'Jeux', catApps:'Applications',
+    siteTitle:'ГУСЬ|МОД — Jeux et applications modifiés pour Android',
+    appPageTitle:'Télécharger {name} (MOD) — ГУСЬ|МОД',
+    categories:{'Приключения':'Aventure','Экшен':'Action','Стратегии':'Stratégie','Аркады':'Arcade','Головоломки':'Puzzle','Симуляторы':'Simulation','Гонки':'Course','Музыка':'Musique','Общение':'Communication','Видео':'Vidéo','Соцсети':'Réseaux sociaux','Фотография':'Photographie','Навигация':'Navigation','Спортивные':'Sports','Ролевые':'RPG'} },
+  de: { navHome:'Start', navGames:'Spiele', navApps:'Apps',
+    heroTitle:'Gehackte Spiele und Apps für Android',
+    heroText:'Unbegrenztes Geld, Edelsteine, freigeschaltete Skins und Premium-Abos. Lade MOD-Versionen kostenlos herunter.',
+    allTitle:'Alle Spiele und Apps', download:'Herunterladen',
+    modInfo:'Was die gehackte Version bietet', goDownload:'Zum Mod-Download',
+    howToTitle:'So lädst du den Mod herunter',
+    step1:'Klicke auf die Schaltfläche „Zum Mod-Download".',
+    step2:'Du wirst zu einer geprüften Seite mit dem Mod weitergeleitet.',
+    step3:'Suche auf der Seite die Download-Schaltfläche (meist „Download") und klicke darauf.',
+    back:'← Zurück zu allen Spielen',
+    catAll:'Alle', catGames:'Spiele', catApps:'Apps',
+    siteTitle:'ГУСЬ|МОД — Gehackte Spiele und Apps für Android',
+    appPageTitle:'{name} (MOD) herunterladen — ГУСЬ|МОД',
+    categories:{'Приключения':'Abenteuer','Экшен':'Action','Стратегии':'Strategie','Аркады':'Arcade','Головоломки':'Puzzle','Симуляторы':'Simulation','Гонки':'Rennen','Музыка':'Musik','Общение':'Kommunikation','Видео':'Video','Соцсети':'Soziale Netzwerke','Фотография':'Fotografie','Навигация':'Navigation','Спортивные':'Sport','Ролевые':'Rollenspiele'} },
+  it: { navHome:'Home', navGames:'Giochi', navApps:'App',
+    heroTitle:'Giochi e app modificati per Android',
+    heroText:'Soldi infiniti, gemme, skin sbloccati e abbonamenti premium. Scarica le versioni MOD gratis.',
+    allTitle:'Tutti i giochi e le app', download:'Scarica',
+    modInfo:'Cosa offre la versione modificata', goDownload:'Vai al download del mod',
+    howToTitle:'Come scaricare il mod',
+    step1:'Premi il pulsante «Vai al download del mod».',
+    step2:'Verrai reindirizzato a una pagina verificata con il mod.',
+    step3:'Trova il pulsante di download nella pagina (di solito «Download» o «Scarica») e premilo.',
+    back:'← Torna a tutti i giochi',
+    catAll:'Tutti', catGames:'Giochi', catApps:'App',
+    siteTitle:'ГУСЬ|МОД — Giochi e app modificati per Android',
+    appPageTitle:'Scarica {name} (MOD) — ГУСЬ|МОД',
+    categories:{'Приключения':'Avventura','Экшен':'Azione','Стратегии':'Strategia','Аркады':'Arcade','Головоломки':'Puzzle','Симуляторы':'Simulazione','Гонки':'Corse','Музыка':'Musica','Общение':'Comunicazione','Видео':'Video','Соцсети':'Social','Фотография':'Fotografia','Навигация':'Navigazione','Спортивные':'Sport','Ролевые':'GDR'} },
+  pt: { navHome:'Início', navGames:'Jogos', navApps:'Aplicativos',
+    heroTitle:'Jogos e aplicativos modificados para Android',
+    heroText:'Dinheiro infinito, gemas, skins desbloqueados e assinaturas premium. Baixe versões MOD gratuitamente.',
+    allTitle:'Todos os jogos e aplicativos', download:'Baixar',
+    modInfo:'O que a versão modificada oferece', goDownload:'Ir para o download do mod',
+    howToTitle:'Como baixar o mod',
+    step1:'Clique no botão «Ir para o download do mod».',
+    step2:'Você será redirecionado para uma página verificada com o mod.',
+    step3:'Encontre o botão de download na página (geralmente «Download» ou «Baixar») e clique nele.',
+    back:'← Voltar a todos os jogos',
+    catAll:'Todos', catGames:'Jogos', catApps:'Aplicativos',
+    siteTitle:'ГУСЬ|МОД — Jogos e aplicativos modificados para Android',
+    appPageTitle:'Baixar {name} (MOD) — ГУСЬ|МОД',
+    categories:{'Приключения':'Aventura','Экшен':'Ação','Стратегии':'Estratégia','Аркады':'Arcade','Головоломки':'Quebra-cabeça','Симуляторы':'Simulação','Гонки':'Corrida','Музыка':'Música','Общение':'Comunicação','Видео':'Vídeo','Соцсети':'Redes sociais','Фотография':'Fotografia','Навигация':'Navegação','Спортивные':'Esportes','Ролевые':'RPG'} },
+  tr: { navHome:'Ana Sayfa', navGames:'Oyunlar', navApps:'Uygulamalar',
+    heroTitle:'Android için kırılmış oyunlar ve uygulamalar',
+    heroText:'Sınırsız para, elmas, açılmış kostümler ve premium abonelikler. MOD sürümlerini ücretsiz indir.',
+    allTitle:'Tüm oyunlar ve uygulamalar', download:'İndir',
+    modInfo:'Kırılmış sürümün sundukları', goDownload:'Mod indirmeye git',
+    howToTitle:'Mod nasıl indirilir',
+    step1:'«Mod indirmeye git» düğmesine basın.',
+    step2:'Modun bulunduğu doğrulanmış sayfaya yönlendirileceksiniz.',
+    step3:'Sayfadaki indirme düğmesini bulun (genellikle «Download») ve tıklayın.',
+    back:'← Tüm oyunlara dön',
+    catAll:'Tümü', catGames:'Oyunlar', catApps:'Uygulamalar',
+    siteTitle:'ГУСЬ|МОД — Android için kırılmış oyunlar ve uygulamalar',
+    appPageTitle:'{name} (MOD) indir — ГУСЬ|МОД',
+    categories:{'Приключения':'Macera','Экшен':'Aksiyon','Стратегии':'Strateji','Аркады':'Atari','Головоломки':'Bulmaca','Симуляторы':'Simülasyon','Гонки':'Yarış','Музыка':'Müzik','Общение':'İletişim','Видео':'Video','Соцсети':'Sosyal','Фотография':'Fotoğrafçılık','Навигация':'Navigasyon','Спортивные':'Spor','Ролевые':'RPG'} },
+  zh: { navHome:'首页', navGames:'游戏', navApps:'应用',
+    heroTitle:'Android 破解游戏和应用',
+    heroText:'无限金钱、宝石、解锁皮肤和高级订阅。免费下载 MOD 版本。',
+    allTitle:'所有游戏和应用', download:'下载',
+    modInfo:'破解版提供什么', goDownload:'前往模组下载',
+    howToTitle:'如何下载模组',
+    step1:'点击“前往模组下载”按钮。',
+    step2:'您将被带到包含模组的已验证页面。',
+    step3:'在页面上找到下载按钮（通常是“Download”）并点击。',
+    back:'← 返回所有游戏',
+    catAll:'全部', catGames:'游戏', catApps:'应用',
+    siteTitle:'ГУСЬ|МОД — Android 破解游戏和应用',
+    appPageTitle:'下载 {name} (MOD) — ГУСЬ|МОД',
+    categories:{'Приключения':'冒险','Экшен':'动作','Стратегии':'策略','Аркады':'街机','Головоломки':'益智','Симуляторы':'模拟','Гонки':'赛车','Музыка':'音乐','Общение':'通讯','Видео':'视频','Соцсети':'社交','Фотография':'摄影','Навигация':'导航','Спортивные':'体育','Ролевые':'角色扮演'} },
+  ja: { navHome:'ホーム', navGames:'ゲーム', navApps:'アプリ',
+    heroTitle:'Android 向けの改造ゲームとアプリ',
+    heroText:'無限のお金、ジェム、解放されたスキン、プレミアム購読。MOD 版を無料でダウンロード。',
+    allTitle:'すべてのゲームとアプリ', download:'ダウンロード',
+    modInfo:'改造版で得られるもの', goDownload:'MOD のダウンロードへ',
+    howToTitle:'MOD のダウンロード方法',
+    step1:'「MOD のダウンロードへ」ボタンを押してください。',
+    step2:'MOD がある検証済みのページに移動します。',
+    step3:'ページ上のダウンロードボタン（通常は「Download」）を見つけてクリックしてください。',
+    back:'← すべてのゲームに戻る',
+    catAll:'すべて', catGames:'ゲーム', catApps:'アプリ',
+    siteTitle:'ГУСЬ|МОД — Android 向けの改造ゲームとアプリ',
+    appPageTitle:'{name} (MOD) をダウンロード — ГУСЬ|МОД',
+    categories:{'Приключения':'アドベンチャー','Экшен':'アクション','Стратегии':'ストラテジー','Аркады':'アーケード','Головоломки':'パズル','Симуляторы':'シミュレーション','Гонки':'レース','Музыка':'音楽','Общение':'コミュニケーション','Видео':'動画','Соцсети':'SNS','Фотография':'写真','Навигация':'ナビ','Спортивные':'スポーツ','Ролевые':'RPG'} },
+  ko: { navHome:'홈', navGames:'게임', navApps:'앱',
+    heroTitle:'Android용 해킹 게임 및 앱',
+    heroText:'무한한 돈, 보석, 잠금 해제된 스킨, 프리미엄 구독. MOD 버전을 무료로 다운로드하세요.',
+    allTitle:'모든 게임 및 앱', download:'다운로드',
+    modInfo:'해킹 버전이 제공하는 것', goDownload:'MOD 다운로드로 이동',
+    howToTitle:'MOD 다운로드 방법',
+    step1:'«MOD 다운로드로 이동» 버튼을 누르세요.',
+    step2:'MOD가 있는 검증된 페이지로 이동합니다.',
+    step3:'페이지에서 다운로드 버튼(보통 «Download»)을 찾아 클릭하세요.',
+    back:'← 모든 게임으로 돌아가기',
+    catAll:'전체', catGames:'게임', catApps:'앱',
+    siteTitle:'ГУСЬ|МОД — Android용 해킹 게임 및 앱',
+    appPageTitle:'{name} (MOD) 다운로드 — ГУСЬ|МОД',
+    categories:{'Приключения':'모험','Экшен':'액션','Стратегии':'전략','Аркады':'아케이드','Головоломки':'퍼즐','Симуляторы':'시뮬레이션','Гонки':'레이싱','Музыка':'음악','Общение':'커뮤니케이션','Видео':'비디오','Соцсети':'소셜','Фотография':'사진','Навигация':'내비게이션','Спортивные':'스포츠','Ролевые':'RPG'} },
+  ar: { navHome:'الرئيسية', navGames:'الألعاب', navApps:'التطبيقات',
+    heroTitle:'ألعاب وتطبيقات مخترقة للأندرويد',
+    heroText:'أموال غير محدودة، جواهر، أسطح مفتوحة واشتراكات مميزة. حمّل نسخ MOD مجانًا.',
+    allTitle:'جميع الألعاب والتطبيقات', download:'تحميل',
+    modInfo:'ما تقدمه النسخة المخترقة', goDownload:'الانتقال إلى تحميل المود',
+    howToTitle:'كيفية تحميل المود',
+    step1:'اضغط على زر «الانتقال إلى تحميل المود».',
+    step2:'ستنتقل إلى صفحة موثوقة تحتوي على المود.',
+    step3:'ابحث عن زر التحميل في الصفحة (عادة «Download») واضغط عليه.',
+    back:'← العودة إلى جميع الألعاب',
+    catAll:'الكل', catGames:'الألعاب', catApps:'التطبيقات',
+    siteTitle:'ГУСЬ|МОД — ألعاب وتطبيقات مخترقة للأندرويد',
+    appPageTitle:'تحميل {name} (MOD) — ГУСЬ|МОД',
+    categories:{'Приключения':'مغامرة','Экшен':'أكشن','Стратегии':'استراتيجية','Аркады':'أركيد','Головоломки':'ألغاز','Симуляторы':'محاكاة','Гонки':'سباق','Музыка':'موسيقى','Общение':'تواصل','Видео':'فيديو','Соцсети':'تواصل اجتماعي','Фотография':'تصوير','Навигация':'ملاحة','Спортивные':'رياضة','Ролевые':'تقمص أدوار'} }
+};
+
+/* ============================================================
+   ОПИСАНИЯ МОДОВ
+   ============================================================ */
+const MOD_DESC = {
+  money: { ru:'Бесконечные деньги, монеты и гемы', en:'Unlimited money, coins, and gems', uk:'Нескінченні гроші, монети та геми', pl:'Nieskończone pieniądze, monety i klejnoty', es:'Dinero, monedas y gemas infinitos', fr:'Argent, pièces et gemmes illimités', de:'Unbegrenztes Geld, Münzen und Edelsteine', it:'Soldi, monete e gemme illimitati', pt:'Dinheiro, moedas e gemas infinitos', tr:'Sınırsız para, jeton ve elmas', zh:'无限金钱、金币和宝石', ja:'無限のお金、コイン、ジェム', ko:'무한한 돈, 코인 및 보석', ar:'أموال وعملات وجواهر غير محدودة' },
+  unlocked: { ru:'Все уровни и персонажи разблокированы', en:'All levels and characters unlocked', uk:'Усі рівні та персонажі розблоковані', pl:'Wszystkie poziomy i postacie odblokowane', es:'Todos los niveles y personajes desbloqueados', fr:'Tous les niveaux et personnages débloqués', de:'Alle Level und Charaktere freigeschaltet', it:'Tutti i livelli e personaggi sbloccati', pt:'Todos os níveis e personagens desbloqueados', tr:'Tüm seviyeler ve karakterler açık', zh:'所有关卡和角色已解锁', ja:'すべてのレベルとキャラクターが解放済み', ko:'모든 레벨과 캐릭터 잠금 해제', ar:'جميع المستويات والشخصيات مفتوحة' },
+  all: { ru:'Всё открыто: скины, персонажи, ресурсы', en:'Everything unlocked: skins, characters, resources', uk:'Усе відкрито: скіни, персонажі, ресурси', pl:'Wszystko odblokowane: skórki, postacie, zasoby', es:'Todo desbloqueado: skins, personajes, recursos', fr:'Tout est débloqué : skins, personnages, ressources', de:'Alles freigeschaltet: Skins, Charaktere, Ressourcen', it:'Tutto sbloccato: skin, personaggi, risorse', pt:'Tudo desbloqueado: skins, personagens, recursos', tr:'Her şey açık: kostümler, karakterler, kaynaklar', zh:'全部解锁：皮肤、角色、资源', ja:'すべて解放：スキン、キャラクター、リソース', ko:'모두 잠금 해제: 스킨, 캐릭터, 리소스', ar:'كل شيء مفتوح: الأسطح والشخصيات والموارد' },
+  aimbot: { ru:'Аимбот, ESP и бесконечные алмазы', en:'Aimbot, ESP, and unlimited diamonds', uk:'Аімбот, ESP та нескінченні алмази', pl:'Aimbot, ESP i nieskończone diamenty', es:'Aimbot, ESP y diamantes infinitos', fr:'Aimbot, ESP et diamants illimités', de:'Aimbot, ESP und unbegrenzte Diamanten', it:'Aimbot, ESP e diamanti illimitati', pt:'Aimbot, ESP e diamantes infinitos', tr:'Aimbot, ESP ve sınırsız elmas', zh:'自动瞄准、透视和无限钻石', ja:'エイムボット、ESP、無限ダイヤ', ko:'에임봇, ESP 및 무한 다이아', ar:'تصويب تلقائي وESP وألماس غير محدود' },
+  premium: { ru:'Премиум-подписка разблокирована', en:'Premium subscription unlocked', uk:'Преміум-підписка розблокована', pl:'Subskrypcja premium odblokowana', es:'Suscripción premium desbloqueada', fr:'Abonnement premium débloqué', de:'Premium-Abo freigeschaltet', it:'Abbonamento premium sbloccato', pt:'Assinatura premium desbloqueada', tr:'Premium abonelik açık', zh:'高级订阅已解锁', ja:'プレミアム購読が解放済み', ko:'프리미엄 구독 잠금 해제', ar:'اشتراك مميز مفتوح' },
+  resources: { ru:'Бесконечные ресурсы и предметы', en:'Unlimited resources and items', uk:'Нескінченні ресурси та предмети', pl:'Nieskończone zasoby i przedmioty', es:'Recursos y objetos infinitos', fr:'Ressources et objets illimités', de:'Unbegrenzte Ressourcen und Gegenstände', it:'Risorse e oggetti illimitati', pt:'Recursos e itens infinitos', tr:'Sınırsız kaynak ve eşya', zh:'无限资源和物品', ja:'無限のリソースとアイテム', ko:'무한 리소스 및 아이템', ar:'موارد وعناصر غير محدودة' },
+  ads: { ru:'Без рекламы и с разблокированными функциями', en:'No ads and unlocked features', uk:'Без реклами та з розблокованими функціями', pl:'Bez reklam i z odblokowanymi funkcjami', es:'Sin anuncios y con funciones desbloqueadas', fr:'Sans publicité et fonctionnalités débloquées', de:'Keine Werbung und freigeschaltete Funktionen', it:'Senza pubblicità e funzioni sbloccate', pt:'Sem anúncios e com recursos desbloqueados', tr:'Reklamsız ve açık özellikler', zh:'无广告且功能解锁', ja:'広告なし、機能解放', ko:'광고 없음 및 기능 잠금 해제', ar:'بدون إعلانات وميزات مفتوحة' }
+};
+
+/* ============================================================
+   ЯЗЫК
+   ============================================================ */
+function translateCat(cat) {
+  const lang = T[currentLang];
+  return (lang.categories && lang.categories[cat]) ? lang.categories[cat] : cat;
+}
+
+function applyLanguage(lang) {
+  if (!T[lang]) lang = 'ru';
+  currentLang = lang;
+  const t = T[lang];
+
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (t[key]) el.textContent = t[key];
+  });
+
+  document.documentElement.lang = lang;
+  document.body.dir = (lang === 'ar') ? 'rtl' : 'ltr';
+
+  if (currentAppId && !document.getElementById('app-page').classList.contains('hidden')) {
+    const app = APPS.find(a => a.id === currentAppId);
+    if (app) {
+      document.getElementById('detail-mod-description').textContent = MOD_DESC[app.modKey][lang];
+      document.title = t.appPageTitle.replace('{name}', app.name);
+    }
+  } else {
+    document.title = t.siteTitle;
+  }
+
+  try { localStorage.setItem('siteLang', lang); } catch (e) {}
+  renderCategories();
+  renderCards();
+}
+
+function renderCategories() {
+  const container = document.getElementById('categories');
+  const t = T[currentLang];
+  const cats = ['Все', 'Игры', 'Приложения'];
+  const subCats = [...new Set(APPS.map(a => a.category))];
+  container.innerHTML = '';
+  cats.concat(subCats).forEach(cat => {
+    const pill = document.createElement('div');
+    pill.className = 'cat-pill' + (cat === currentCategory ? ' active' : '');
+    let label = cat;
+    if (cat === 'Все') label = t.catAll;
+    else if (cat === 'Игры') label = t.catGames;
+    else if (cat === 'Приложения') label = t.catApps;
+    else label = translateCat(cat);
+    pill.textContent = label;
+    pill.onclick = () => {
+      setCategory(cat);
+      resetLogoClickCount();
+    };
+    container.appendChild(pill);
+  });
+}
+
+function setCategory(cat) {
+  currentCategory = cat;
+  renderCategories();
+  renderCards();
+  resetLogoClickCount();
+}
+
+function makeSvgFallback(name) {
+  const palette = [
+    ['#2563eb', '#1e40af'], ['#7c3aed', '#5b21b6'], ['#dc2626', '#991b1b'],
+    ['#16a34a', '#166534'], ['#ea580c', '#9a3412'], ['#0ea5e9', '#0369a1'],
+    ['#db2777', '#9d174d'], ['#ca8a04', '#854d0e']
+  ];
+  let hash = 0;
+  for (let i = 0; i < name.length; i++) hash = (hash * 31 + name.charCodeAt(i)) >>> 0;
+  const [c1, c2] = palette[hash % palette.length];
+  const letter = name.trim().charAt(0).toUpperCase();
+  const svg =
+    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">' +
+    '<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">' +
+    '<stop offset="0" stop-color="' + c1 + '"/>' +
+    '<stop offset="1" stop-color="' + c2 + '"/></linearGradient></defs>' +
+    '<rect width="100" height="100" rx="24" fill="url(#g)"/>' +
+    '<text x="50" y="70" font-size="50" font-weight="900" fill="#fff" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" letter-spacing="-2">' + letter + '</text></svg>';
+  return 'data:image/svg+xml;utf8,' + encodeURIComponent(svg);
+}
+
+function setupIcon(img, sources, name) {
+  let i = 0;
+  function tryNext() {
+    if (i >= sources.length) {
+      img.onerror = null;
+      img.src = makeSvgFallback(name);
+      return;
+    }
+    img.onerror = tryNext;
+    img.src = sources[i++];
+  }
+  tryNext();
+}
+
+function renderCards() {
+  const grid = document.getElementById('cards-grid');
+  const t = T[currentLang];
+  grid.innerHTML = '';
+
+  let filtered = APPS;
+  if (currentCategory === 'Игры') filtered = APPS.filter(a => a.type === 'Игры');
+  else if (currentCategory === 'Приложения') filtered = APPS.filter(a => a.type === 'Приложения');
+  else if (currentCategory !== 'Все') filtered = APPS.filter(a => a.category === currentCategory);
+
+  if (filtered.length === 0) {
+    grid.innerHTML = '<p style="grid-column:1/-1;text-align:center;color:#64748b;padding:40px 0;">—</p>';
+    return;
+  }
+
+  filtered.forEach(app => {
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.onclick = () => openApp(app.id);
+    const badgeClass = app.badgeType === 'free' ? 'badge-free' : 'badge-mod';
+
+    card.innerHTML = `
+      <div class="badges"><span class="badge ${badgeClass}">${app.badge}</span></div>
+      <div class="thumb"><img alt="${app.name}"></div>
+      <div class="name">${app.name}</div>
+      <div class="cat">${translateCat(app.category)}</div>
+      <div class="bottom">
+        <span class="ver">${app.version}</span>
+        <span class="btn-dl">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg>
+          ${t.download}
+        </span>
+      </div>
+    `;
+
+    const img = card.querySelector('img');
+    setupIcon(img, app.iconSources, app.name);
+    grid.appendChild(card);
+  });
+}
+
+function openApp(id) {
+  const app = APPS.find(a => a.id === id);
+  if (!app) return;
+  const t = T[currentLang];
+  currentAppId = id;
+
+  document.getElementById('detail-name').textContent = app.name;
+  document.getElementById('detail-badge').textContent = app.badge;
+  document.getElementById('detail-category').textContent = translateCat(app.category);
+  document.getElementById('detail-version').textContent = app.version;
+  document.getElementById('detail-size').textContent = app.size;
+  document.getElementById('detail-mod-description').textContent = MOD_DESC[app.modKey][currentLang];
+  document.getElementById('detail-download').href = app.downloadUrl;
+
+  const detailImg = document.getElementById('detail-icon');
+  detailImg.alt = app.name;
+  setupIcon(detailImg, app.iconSources, app.name);
+
+  document.getElementById('main-page').classList.add('hidden');
+  document.getElementById('app-page').classList.remove('hidden');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  document.title = t.appPageTitle.replace('{name}', app.name);
+  if (history.pushState) history.pushState({ id }, '', '#' + id);
+}
+
+function showMain() {
+  currentAppId = null;
+  document.getElementById('app-page').classList.add('hidden');
+  document.getElementById('main-page').classList.remove('hidden');
+  document.title = T[currentLang].siteTitle;
+  if (history.pushState) history.pushState({}, '', '#');
+  window.scrollTo({ top: 0 });
+  resetLogoClickCount();
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  let savedLang = 'ru';
+  try { savedLang = localStorage.getItem('siteLang') || 'ru'; } catch (e) {}
+  if (!T[savedLang]) savedLang = 'ru';
+
+  document.getElementById('lang-select').value = savedLang;
+  document.getElementById('lang-select').addEventListener('change', function () {
+    applyLanguage(this.value);
+  });
+
+  applyLanguage(savedLang);
+
+  const hash = window.location.hash.replace('#', '');
+  if (hash && APPS.some(a => a.id === hash)) openApp(hash);
+
+  window.addEventListener('popstate', function () {
+    const h = window.location.hash.replace('#', '');
+    if (h && APPS.some(a => a.id === h)) openApp(h);
+    else {
+      currentAppId = null;
+      document.getElementById('app-page').classList.add('hidden');
+      document.getElementById('main-page').classList.remove('hidden');
+      document.title = T[currentLang].siteTitle;
+    }
+  });
+});
+</script>
+
+</body>
+  </html>
